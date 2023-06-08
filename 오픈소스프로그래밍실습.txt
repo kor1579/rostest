@@ -1,0 +1,23 @@
+$ wget https://raw.githubusercontent.com/ROBOTIS-GIT/OpenCR/master/99-opencr-cdc.rules
+$ sudo cp ./99-opencr-cdc.rules /etc/udev/rules.d/
+$ sudo udevadm control --reload-rules
+$ sudo udevadm trigger
+$ sudo apt-get install libncurses5-dev:i386
+$ mkdir ~/tools
+$ cd ~/tools/arduino-1.8.19-linux64/arduino-1.8.19
+$ sudo ./install.sh
+$ gedit ~/.bashrc
+$ source ~/.bashrc
+$ arduino
+$ sudo apt install fonts-nanum-coding
+$ ll /usr/share/fonts/truetype/nanum/
+$ sudo apt-get update
+https://raw.githubusercontent.com/ROBOTIS-GIT/OpenCR/master/arduino/opencr_release/package_opencr_index.json
+$ sudo apt-get install ros-noetic-rosserial-arduino
+$ sudo apt-get install ros-noetic-rosserial
+$ rosrun rosserial_python serial_node.py __name:=opencr _port:=/dev/ttyACM0 _baud:=115200
+$ export OPENCR_PORT=/dev/ttyACM0
+$ export OPENCR_MODEL=waffle_noetic
+$ cd ./opencr_update
+$ ./update.sh $OPENCR_PORT $OPENCR_MODEL.opencr
+$ sudo reboot
